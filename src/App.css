@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+
+  font-family: "Poppins", sans-serif;
+  background-color:lavender;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.container {
+  text-align: center;
+  background-color: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+}
+
+h1 {
+  color: #ff77a9;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  animation: vibrate 0.5s infinite; /* Increased duration to 0.5s */
+}
+
+@keyframes vibrate {
+  0% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translate(1px, -1px);
+  }
+  50% {
+    transform: translate(-1px, 1px);
+  }
+  75% {
+    transform: translate(1px, 1px);
+  }
+  100% {
+    transform: translate(-1px, -1px);
+  }
+}
+
+
+p {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 40px; /* Added spacing between the text and hearts */
+}
+
+
+
+/* App.css */
+
+.image-container {
+  margin-top: 30px;
+  perspective: 1000px; /* Add perspective for 3D effect */
+}
+
+.anniversary-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 
+              0 15px 40px rgba(0, 0, 0, 0.4); /* Shadow for depth */
+  transition: transform 0.1s, box-shadow 0.1s; /* Smooth transition for tilting and shadow */
+}
+
+.anniversary-image:hover {
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6), 
+              0 25px 50px rgba(0, 0, 0, 0.5); /* Enhance shadow on hover */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between; /* Space between images */
+  align-items: center; /* Center images vertically */
+  gap: 10px; /* Space between images */
+  flex-wrap: wrap; /* Wrap images to the next line if necessary */
+}
+
+.newImage {
+  width: 150px; /* Set a specific width for the images */
+  height: 150px; /* Set a specific height for the images */
+  object-fit: cover; /* Crop the image to fit the container without distortion */
+  border-radius: 8px; /* Optional: Round corners of the images */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow to the images */
+  animation: beat 1.5s infinite; /* Add animation with a 1.5-second duration */
+}
+
+/* Keyframes for the beating effect */
+@keyframes beat {
+  0%, 100% {
+    transform: scale(1); /* Normal size */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4); /* Normal shadow */
+  }
+  50% {
+    transform: scale(1.02); /* Slightly larger at the midpoint */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.6); /* Stronger shadow at peak */
+  }
+}
+
+
